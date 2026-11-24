@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --surface: #fffdf8;
+  --slate-50: #f7f4ec;
+  --slate-100: #eee8dc;
+  --slate-200: #dfd4c2;
+  --slate-300: #c9b89f;
+  --slate-400: #aa967a;
+  --slate-500: #88745b;
+  --slate-600: #6d5943;
+  --slate-700: #554331;
+  --slate-800: #3e3024;
+  --slate-900: #2f241b;
+  --slate-950: #1f1711;
+  --campus-50: #f7f1e7;
+  --campus-100: #ecdfca;
+  --campus-200: #dcc6a2;
+  --campus-300: #c8a77a;
+  --campus-400: #ad875a;
+  --campus-500: #916c46;
+  --campus-600: #765538;
+  --campus-700: #60432e;
+  --campus-800: #493324;
+  --campus-900: #35251a;
+  --campus-950: #24180f;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --surface: #29231d;
+  --slate-50: #1c1814;
+  --slate-100: #29231d;
+  --slate-200: #3b3228;
+  --slate-300: #544638;
+  --slate-400: #78664f;
+  --slate-500: #a18b6e;
+  --slate-600: #c0aa8c;
+  --slate-700: #d5c4aa;
+  --slate-800: #e7d9c6;
+  --slate-900: #f2eadc;
+  --slate-950: #fbf6ed;
+  --campus-50: #30261c;
+  --campus-100: #3d3023;
+  --campus-200: #503d29;
+  --campus-300: #644a2e;
+  --campus-400: #785835;
+  --campus-500: #684a2e;
+  --campus-600: #604328;
+  --campus-700: #967a55;
+  --campus-800: #b69a72;
+  --campus-900: #dec59b;
+  --campus-950: #f0dfbf;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+:root[data-theme='dark'] .bg-white {
+  background-color: var(--surface);
+}
+
+:root[data-theme='dark'] .bg-white\/95 {
+  background-color: rgb(41 35 29 / 95%);
+}
+
+:root[data-theme='dark'] .text-campus-600 {
+  color: #d8bd91;
+}
+
+:root[data-theme='dark'] .text-campus-700,
+:root[data-theme='dark'] .text-campus-900 {
+  color: #ead8b8;
+}
+
+:root[data-theme='dark'] .hover\:text-campus-700:hover {
+  color: #f2e5ce;
+}
+
+:root[data-theme='dark'] .text-slate-400 {
+  color: #bca98d;
+}
+
+:root[data-theme='dark'] .text-slate-500 {
+  color: #cfbea3;
+}
+
+:root[data-theme='dark'] .text-slate-600 {
+  color: #e0d1b9;
+}
+
+:root[data-theme='dark'] .text-campus-100 {
+  color: #f0dfc0;
+}
+
+:root[data-theme='dark'] .bg-sky-50 {
+  background-color: #30281f;
+}
+
+:root[data-theme='dark'] .border-sky-200 {
+  border-color: #5a4833;
+}
+
+:root[data-theme='dark'] .text-sky-900,
+:root[data-theme='dark'] .text-sky-800 {
+  color: #e7d8bd;
+}
+
+:root[data-theme='dark'] .text-sky-700 {
+  color: #d7c6a9;
+}
+
+:root[data-theme='dark'] .text-sky-600 {
+  color: #c3a97a;
+}
+
+:root[data-theme='dark'] input:not([type='checkbox']):not([type='radio']),
+:root[data-theme='dark'] select,
+:root[data-theme='dark'] textarea {
+  background-color: var(--slate-100);
+  color: var(--slate-900);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--slate-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--slate-300);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--slate-400);
+}
